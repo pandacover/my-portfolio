@@ -1,0 +1,131 @@
+.header a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.header ul {
+    list-style: none;
+}
+
+.header {
+    background-color: var(--black-1);
+    --height: 50px;
+    box-shadow: 0 0 3px 2px #000;
+    margin: 0 0 2em 0;
+    position: fixed;
+}
+
+.navbar {
+    --height: 100%;
+}
+
+.title_container {
+    flex: 1;
+    padding: 0 2em;
+    font-size: 1.5rem;
+    align-items: center;
+    letter-spacing: 0.1rem;
+    justify-content: center;
+}
+
+.nav {
+    flex: 2;
+    --gap: 3em;
+    padding: 0 2em;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav_items a {
+    font-size: 1rem;
+    transition: color 150ms ease-in-out 0s;
+}
+
+.nav_items a:hover {
+    color: var(--blue-1);
+}
+
+.nav_items button {
+    cursor: pointer;
+}
+
+/* Light Mode */
+.header.light {
+    background-color: var(--white);
+    box-shadow: 0 0 3px 2px var(--gray);
+}
+
+.header.light .title_container a {
+    color: #000;
+}
+
+.header.light .nav_items a {
+    color: var(--blue-1);
+}
+
+.header.light .nav_items a:hover {
+    color: #000;
+}
+
+.mobile_button {
+    display: none;
+}
+
+.mobile_button input[type="checkbox"] {
+    display: none;
+}
+
+
+@media screen and (max-width: 820px) {
+    .navbar {
+        position: relative;
+        gap: 0;
+        --height: 50px;
+    }
+
+    .nav {
+        top: 51px;
+        right: 0;
+        width: 100%;
+        min-height: 100vh;
+        max-height: 200em;
+        position: absolute;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.6);
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(1rem);
+        transition: transform 250ms ease-in-out 0s;
+        z-index: 999;
+    }
+
+    .header.light ul {
+        background: transparent;
+    }
+
+    .mobile_button {
+        flex: 1;
+        display: flex;
+        padding-right: 3em;
+        justify-content: flex-end;
+    }
+
+    .mobile_button input[type="checkbox"] {
+        display: none;
+    }
+
+    .mobile_button button {
+        padding: .8em;
+        aspect-ratio: 1;
+    }
+
+    .nav.true {
+        transform: translateX(0%);
+        overflow-y: hidden;
+    }
+
+    .nav.false {
+        transform: translateX(110%);
+    }
+
+}

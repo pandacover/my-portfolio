@@ -1,0 +1,105 @@
+.container a {
+    color: var(--white);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 150ms ease-in-out 0s;
+}
+
+.container a:hover {
+    color: var(--blue-1);
+}
+
+.container {
+    --gap: .7em;
+    --height: 100vh;
+}
+
+.content, .image {
+    flex: 1;
+    height: 100%;
+}
+
+.content {
+    padding: 15em min(12em, 12vw);    
+    padding-bottom: 0;
+    line-height: 3em;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content p:nth-of-type(1) span {
+    font-size: 1rem;
+}
+
+.content p:nth-of-type(2) span {
+    font-size: 2.6rem;
+    font-weight: 600;
+    font-variant: small-caps;
+}
+
+.content p:nth-of-type(3) span {
+    font-size: 1.3rem;
+}
+
+.content p:nth-of-type(4) {
+    line-height: 1.7rem;
+    padding: 2em 0;
+}
+
+.content p:nth-of-type(4) span {
+    font-size: .9rem;
+}
+
+.social {
+    padding: 3em 0;
+}
+
+.social a {
+    margin: 0 1em;
+}
+
+.social a:nth-of-type(1) {
+    margin-left: 0;
+}
+
+.image {
+    align-items: center;
+    padding-top: 2em;
+    padding-right: 2em;
+}
+
+.image img {
+    max-height: 80vh;
+}
+
+/* Light Mode */
+
+.light .content p span {
+    color: #000;
+}
+
+.light .social a {
+    color: var(--blue-1);
+}
+
+.light .social a:hover {
+    color: rgb(16, 58, 172);
+}
+
+/* Mobile View */
+
+@media screen and (max-width: 1020px) {
+    .image {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 48em) {
+    .container {
+        --height: auto;
+    }
+    
+    .content {
+        width: 100%;
+    }
+}

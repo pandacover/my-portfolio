@@ -1,0 +1,28 @@
+.container ul {
+    list-style: none;
+}
+
+.container {
+    text-align: center;
+    --height: auto;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 0.08rem;
+    font-variant: small-caps;
+}
+
+.skillset {
+    flex-wrap: wrap;
+    width: min(80vw, 80em);
+    justify-content: center;
+    margin: min(7em, 10vh) auto;
+}
+
+.skillset_item {
+    flex: 1;
+    font-size: 6rem;
+    color: var(--blue-2);
+}

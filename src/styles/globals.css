@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --blue-1: #6D83F2;
+    --blue-2: #6A98F0;
+    --blue-3: linear-gradient(134deg, #6A98F0 0%, #4961DC 99%);
+    --white: #F8F8F8;
+    --black-1: #303030;
+    --black-2: #191919;
+    --black-3: #383838;
+    --gray: #C7D0FF;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+body, html { 
+    scroll-behavior: smooth;
+    /* font-family: monospace; */
+    min-width: 100%;
+    height: 100%;
+    scrollbar-base-color: #4961DC;
+    position: relative;
+}
+
+body, .main-body {
+    background-color: var(--black-2);
+    color: var(--white);
+    font-size: .7rem;
+}
+
+body.light, .main-body.light {
+    background-color: var(--white);
+    color: var(--blue-1);
+}
+
+/* Scroll bar */
+body::-webkit-scrollbar {
+    width: 0.7em;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--blue-2);
+
+}
+body::-webkit-scrollbar-track {
+    background-color: var(--white);
+}
+
+.disable-scroll {
+    overflow-y: hidden;
+}
+/* Custom elements */
+.container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: var(--height, 100px);
+}
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1em);
+}
+
+.btn {
+    background: var(--blue-2);
+    border: none;
+    cursor: pointer;
+    padding: .8em 2em;
+    color: var(--white);
+    border-radius: .4em;
+    transition: background 250ms ease-in-out 0s;
+}
+
+.btn:hover {
+    /* background: var(--blue-1); */
+    background: rgb(16, 58, 172);
+
+}
